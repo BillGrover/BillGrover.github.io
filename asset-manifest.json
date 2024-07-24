@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BillGrover.github.io/static/css/main.964fdded.css",
+    "main.js": "/BillGrover.github.io/static/js/main.4596e0bb.js",
+    "static/js/453.96d09e01.chunk.js": "/BillGrover.github.io/static/js/453.96d09e01.chunk.js",
+    "index.html": "/BillGrover.github.io/index.html",
+    "main.964fdded.css.map": "/BillGrover.github.io/static/css/main.964fdded.css.map",
+    "main.4596e0bb.js.map": "/BillGrover.github.io/static/js/main.4596e0bb.js.map",
+    "453.96d09e01.chunk.js.map": "/BillGrover.github.io/static/js/453.96d09e01.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.4596e0bb.js"
+  ]
+}
