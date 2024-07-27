@@ -9,6 +9,8 @@ function App() {
   const [congratulation, setCongratulation] = useState('');
   const jopa = 'кудрявая жопа';
   const gluk = 'глюк';
+  const check = 'check';
+  const reset = 'reset';
   const allowedNames = ['ришат', 'rishat', 'реша', 'решка', jopa, gluk];
   const bonusCongrat = 'Поздравляю! Ты посмотрел (Надеюсь, ты их читал. Читал же? Я ведь старался.) все 36 сомнительных поздравлений и открыл истинное поздравление!\nС днём рождения! \nЖелаю тебе терпения и мудрости, чтобы сохранить семью благополучной и счастливой. Желаю сил и здоровья, чтобы справляться с житейскими невзгодами. Пусть твой разум будет ясным, а сердце – спокойным. \nИ, надеюсь, что на следующий день рождения ты будешь получать подарки получше, чем мои.';
 
@@ -68,6 +70,14 @@ function App() {
     const normalizedName = name.trim().toLowerCase();
 
     function showGrat() {
+		if (normalizedName === check) {
+			console.log(gratCounter+'_'+clickCounter+'_'+isGlukUsed+'_'+isJopaUsed);
+			return;
+		}
+		if (normalizedName === reset) {
+			setGratCounter(0); setClickCounter(0); isGlukUsed=false; isJopaUsed=false;
+			return;
+		}
       if (clickCounter > 0) setClickCounter(prev => prev + 1);
       for (let key of countMap.keys()) {
         if (clickCounter > key) {
