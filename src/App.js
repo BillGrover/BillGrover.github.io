@@ -70,14 +70,6 @@ function App() {
     const normalizedName = name.trim().toLowerCase();
 
     function showGrat() {
-		if (normalizedName === check) {
-			console.log(gratCounter+'_'+clickCounter+'_'+isGlukUsed+'_'+isJopaUsed);
-			return;
-		}
-		if (normalizedName === reset) {
-			setGratCounter(0); setClickCounter(0); isGlukUsed=false; isJopaUsed=false;
-			return;
-		}
       if (clickCounter > 0) setClickCounter(prev => prev + 1);
       for (let key of countMap.keys()) {
         if (clickCounter > key) {
@@ -103,6 +95,15 @@ function App() {
       const index = Math.floor(Math.random() * congratulations.length);
       setCongratulation(congratulations[index]);
       setGratCounter(prevSet => new Set(prevSet.add(index)));
+    }
+
+    if (normalizedName === check) {
+      console.log('gra'+gratCounter.size+'_cli'+clickCounter+'_'+isGlukUsed+'_'+isJopaUsed);
+      return;
+    }
+    if (normalizedName === reset) {
+      setGratCounter(0); setClickCounter(0); isGlukUsed=false; isJopaUsed=false;
+      return;
     }
 
     if (normalizedName == null || normalizedName === '' || !allowedNames.includes(normalizedName)) {
